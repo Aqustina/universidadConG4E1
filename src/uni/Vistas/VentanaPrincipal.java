@@ -74,6 +74,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu3.add(jmManejodeInscripciones);
 
         jmManipulaciondeNotas.setText("Manipulacion de Notas");
+        jmManipulaciondeNotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmManipulaciondeNotasActionPerformed(evt);
+            }
+        });
         jMenu3.add(jmManipulaciondeNotas);
 
         jMenuBar1.add(jMenu3);
@@ -81,6 +86,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu4.setText("Consultas");
 
         jmAlumnosporMateria.setText("Alumnos por Materia");
+        jmAlumnosporMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmAlumnosporMateriaActionPerformed(evt);
+            }
+        });
         jMenu4.add(jmAlumnosporMateria);
 
         jMenuBar1.add(jMenu4);
@@ -119,10 +129,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmMateriaActionPerformed
 
     private void jmManejodeInscripcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmManejodeInscripcionesActionPerformed
-        VistaInscripciones insc = new VistaInscripciones();
+        VistaInscripcion insc = new VistaInscripcion();
         insc.setVisible(true);
-        escritorio.add(insc);             //REHACER
+        escritorio.add(insc);
     }//GEN-LAST:event_jmManejodeInscripcionesActionPerformed
+
+    private void jmManipulaciondeNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmManipulaciondeNotasActionPerformed
+        VistaCargaNotas notas = new VistaCargaNotas();
+        notas.setVisible(true);
+        escritorio.add(notas);
+    }//GEN-LAST:event_jmManipulaciondeNotasActionPerformed
+
+    private void jmAlumnosporMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAlumnosporMateriaActionPerformed
+        
+    }//GEN-LAST:event_jmAlumnosporMateriaActionPerformed
 
     
     public static void main(String args[]) {

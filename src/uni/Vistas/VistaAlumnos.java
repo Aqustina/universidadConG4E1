@@ -221,7 +221,7 @@ private Alumno alumnoActual = null;
             java.util.Date date = java.util.Date.from(lc.atStartOfDay(ZoneId.systemDefault()).toInstant());
             jdcFechaNacimiento.setDate(date);
         }
-        }catch(NumberFormatException eX){
+        }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(this, "ERROR AL INGRESAR EL DOCUMENTO");
         }
     }//GEN-LAST:event_jbBuscarActionPerformed
